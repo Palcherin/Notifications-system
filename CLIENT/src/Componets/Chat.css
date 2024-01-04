@@ -1,0 +1,114 @@
+.chat-window{
+    width: 300px;
+    height: 420px;
+    background: #eee;
+    
+}
+
+.chat-header{
+    display: block;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 25px;
+    height: 45px;
+    border-radius: 6px;
+    background: #263238;
+    position: relative;
+    cursor: pointer;
+    color: #fff;
+    padding-left: 10%;
+}
+.chat-window .chat-container {
+    height: calc(450px - (45px + 70px));
+    border: 1px solid #263238;
+    background: #fff;
+  
+    position: relative;
+  }
+  .chat-window .chat-body .message-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+   
+  .chat-window .chat-container .message-container::-webkit-scrollbar {
+    display: none;
+  }
+  .chat-window .chat-container .message {
+    height: auto;
+    padding: 10px;
+    display: flex;
+  }
+  .message-content{
+    width: auto;
+    height: auto;
+    min-height: 40px;
+    max-width: 120px;
+    background-color: #263238;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  .message-meta{
+    display: flex;
+    gap: 15%;
+  }
+  .message-meta #time, #author {
+    font-size: 10px;
+    font-weight: bold;
+  }
+  #you{
+    justify-content: flex-start;
+  }
+  #you .message-content {
+    justify-content: flex-start;
+  }
+  
+  #you .message-meta {
+    justify-content: flex-start;
+    margin-left: 5px;
+  }
+  
+  #other {
+    justify-content: flex-end;
+  }
+  
+  #other .message-content {
+    justify-content: flex-end;
+    background-color: cornflowerblue;
+  }
+  
+  #other .message-meta {
+    justify-content: flex-end;
+    margin-right: 5px;
+  }
+  
+  .message-meta #author {
+    margin-left: 10px;
+    font-weight: bold;
+  }
+.chat-window .chat-footer{
+    position: fixed;
+}
+.chat-footer input{
+    padding: 10px;
+    background: #fff;
+}
+.chat-footer button{
+    width: 40px;
+    height: 40px;
+}
+.hide {
+    opacity: 0 !important;
+  }
+  .chat-window .chat-body .message-container::-webkit-scrollbar {
+    display: none;
+  }
