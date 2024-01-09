@@ -1,6 +1,8 @@
 import React from 'react'
 import './Heropic.css'
 import { FaArrowRight } from 'react-icons/fa'
+import { Heropictest } from './Heropictest'
+
 
 export const Heropic = () => {
   return (
@@ -18,43 +20,43 @@ export const Heropic = () => {
           <button className='btn-primary'>Get Started</button>
         </div>
         <div className='heropic-image'>
-          <img src='assests/home-page.avif' />
+          <img src='assests/live-gps-vehicle-tracking-device-min.png' />
         </div>
       </div>
-
+      <div className='intro'> <h1>Explore the services provided</h1> 
+      <div className='underlined'></div></div>
       <div className='heropic-content '>
         <div>
         
         <div className='bus-tracking'>
           <div className='tracking-intro'>
-          <img src='assests/map-page.avif' /> 
+          <img src='assests/schoolbus-tracking-banner.jpg' /> 
           </div>
           <div className='tracking-content'>
           <section>
-            <h1>We care about your peace of mind..</h1>
-            <p>We give you the power to track the real time location of the bus,and the routes being used for the best experience.
+          <Heropictest  heading='We care about your peace of mind..' text='We give you the power to track the real time location of the bus,and the routes being used for the best experience.
               this helps save parents time in waiting for the bus to arrive and also enables timely preparations. School managements 
               can however ensure route optimization and better maintenance of the bus.
               This plus other fuctionality of this system will help reduce worries and put more focus on more important things. 
-              You want to track the bus?
-            </p>
+              You want to track the bus?' />
             <button className='btn-secondary' ><FaArrowRight /> </button>
           </section>
           </div>
         </div>
-    
+       <div className=''>
+        
+       </div>
         </div>
         <div>
+          
         
         <div className='chatroom'>
           <div className='tracking-content'>
-          <h1>Chatroom</h1>
           <section>
-            <p>You have a message to pass accross? No worries...this system enables you to send a text to different persons,
+          <Heropictest heading='Chatroom' text='You have a message to pass accross? No worries...this system enables you to send a text to different persons,
               including teachers, stass and parents too. All you need to do is enter your name and the Room number given for each
               department or person. Room numbers may vary depending on your recipient.
-              Want to acces the Notification
-            </p>
+              Want to acces the Notification' />
             <button className='btn-secondary' ><FaArrowRight /> </button>
           </section>
           </div>
@@ -73,28 +75,25 @@ export const Heropic = () => {
           </div>
           <div className='tracking-content'>
           <section>
-            <h1>Chatroom</h1>
-            <p>You have a message to pass accross? No worries...this system enables you to send a text to different persons,
+          <Heropictest heading='Chatroom'  text='You have a message to pass accross? No worries...this system enables you to send a text to different persons,
               including teachers, stass and parents too. All you need to do is enter your name and the Room number given for each
               department or person. Room numbers may vary depending on your recipient.
-              Want to acces the Notification
-            </p>
+              Want to acces the Notification' />
             <button className='btn-secondary' ><FaArrowRight /> </button>
           </section>
           </div>
         </div>
+        
         <div className='welfare'>
           <div className='tracking-content'>
-          <h1>Welfare </h1>
           <section>
-            
-            <p>Send your concers direct to us and we will get back to you as
-              soon as we can. Visit our chat room to send us the message</p>
+          <Heropictest heading='Welfare ' text='Send your concers direct to us and we will get back to you as
+              soon as we can. Visit our chat room to send us the message' />
             <button className='btn-secondary' ><FaArrowRight /> </button>
           </section>
           </div>
           <div className='tracking-intro'>
-          <img src='assests/notifications-page.avif' />
+          <img src='assests/school-bus-monitoring.jpg' />
 
           </div>
         </div>

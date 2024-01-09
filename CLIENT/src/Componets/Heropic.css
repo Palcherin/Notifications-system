@@ -55,12 +55,23 @@
     gap: 30px;
     /* background: rgb(158, 168, 249); */
 }
+.intro{
+    margin: 50px;
+    padding-left: 30%;
+}
+.underlined{
+        background: blue;
+        height: 4px;
+        align-self: center;
+        width: 30%;
+    }
+
 .heropic-content p{
     width: 80%;
     align-self: center;
 }
 .heropic-content img{
-    width: 50%;
+    width: 100%;
 }
 section{
     margin-left: 6%;
@@ -155,6 +166,7 @@ section{
     background: rgb(126, 142, 247);
     height: 30vh;
     padding: 5%;
+    margin-bottom: 10px;
 }
 .why-us h1{
     font-style: italic;
@@ -170,4 +182,7 @@ section{
     padding-left: 5%;
     width: 80%;
     font-style: italic;
+}
+.heropictest-container h1{
+
 }

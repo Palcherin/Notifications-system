@@ -1,16 +1,18 @@
-import firebase from 'firebase'
+import * as firebase from 'firebase/app'
 import { initializeApp } from "firebase/app";
+import {getAuth} from  'firebase/auth'
 
-const firebaseConfig={
-    apiKey: "AIzaSyApjseK1ZJO0CE9A6KSXOHIBbfuSADWdwY",
-  authDomain: "final-project-b8939.firebaseapp.com",
-  projectId: "final-project-b8939",
-  storageBucket: "final-project-b8939.appspot.com",
-  messagingSenderId: "662806998594",
-  appId: "1:662806998594:web:8ff4198490a75ec3ad47db",
-  measurementId: "G-KR37HY2P87"
-}
+const firebaseConfig = {
+  apiKey: "AIzaSyAwfM7rWQsdNtPDUKjQLowf8hxRT5wVyR4",
+  authDomain: "notifications-system-ccb7e.firebaseapp.com",
+  projectId: "notifications-system-ccb7e",
+  storageBucket: "notifications-system-ccb7e.appspot.com",
+  messagingSenderId: "47897022079",
+  appId: "1:47897022079:web:f7e5fa515c87e373a1394a"
+};
 
-const app=initializeApp(firebaseConfig);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const database= getAuth(app);
 
-export default app;
+export default database;

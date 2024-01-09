@@ -1,0 +1,103 @@
+/* .login-page{
+    background: blue;
+    align-items: center;
+    padding-top: 5%;
+    padding-left: 40%;
+    height: 70vh;
+    padding-bottom: 10%;
+}
+.content{
+    background: lavenderblush;
+    width: fit-content;
+    padding: 10%;
+    margin-bottom: 20px;
+    min-height: 350px;
+}
+.content h6{
+    font-size: 20px;
+    width: 250px;
+}
+header{
+    padding-bottom: 20px;
+}
+.title{
+    font-size: 49px;
+    color: rgb(8, 8, 88);
+}
+
+.underline{
+    background: blue;
+    height: 4px;
+    align-self: center;
+    width: 30%;
+}
+.input{
+    padding: 2%;
+    display: flex;
+    background: #c5c2c2;
+    margin: 5px;
+}
+.input input{
+    padding: 10px;
+    border: none;
+    
+}
+.input .icon{
+    size: 20px;
+    width: 35px;
+    padding-top: 7px;
+}
+.forgot-password span a{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.submitsection{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 10%;
+}
+.submit-btn{
+    background: blue;
+    padding: 7px;
+    width: 40%;
+    height: 25px;
+    cursor: pointer;
+    transition: all 0.5 ease;
+    font-size: 20px;
+    
+}
+.inactive{
+    padding: 7px;
+    width: 40%;
+    /* background: rgb(99, 97, 97); */
+    /* background: #c5c2c2;
+    cursor: pointer;
+    color: #000;
+} */ 
+.row{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.activeColor{
+    padding-top:5px;
+    height: 30px;
+    width: 10%;
+    border: 2px solid grey;
+    cursor: pointer;
+}
+.pointer{
+    cursor: pointer;
+}
+.login-page{
+    background-color: blue;
+    height: 50vh;
+    padding-left: 20%;
+}
+form{
+    background: lavenderblush;
+    width: fit-content;
+    padding: 5%;
+}
