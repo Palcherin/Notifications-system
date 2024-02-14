@@ -8,7 +8,7 @@ const Navbar = () => {
       {name:"ChatRoom",link:"/chatroom"},
       {name:"NOTIFY",link:"/notification"},
       {name:"ABOUT US",link:"/about"},
-      {name:"CONTACT",link:"/contact"},
+      {name:"T",link:"/contact"},
     ];
     let [open,setOpen]=useState(false);
   return (
@@ -35,7 +35,7 @@ const Navbar = () => {
           ))
         }
         <Button >
-          Book
+          TRACK
         </Button>
       </ul>
       </div>

@@ -1,10 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Heropic.css'
 import { FaArrowRight, FaBell, FaBus, FaClock, FaDirections, FaLocationArrow } from 'react-icons/fa'
 import { Heropictest } from './Heropictest'
+import {db} from '../config/firebase'
+import { getDocs, collection, addDoc} from 'firebase/firestore';
 
 
 export const Heropic = () => {
+  event.preventDefault();
+  const [name, setName]=useState("");
+  const [email, setEmail]=useState("");
+  const [phone,setPhone]=useState("")
+  const [text, setText]=useState("");
+  const [title, setTitle]= useState("");
+
+
+
+  const textCollectioneRef =collection(db, "notificatio-form");
+
+  const submitHandler=async ()=>{
+    event.preventDefault();
+    try{
+    await addDoc( textCollectioneRef,
+      {
+        Name:name,
+        Email:email,
+        Select:phone,
+        Text:text,
+        title:title
+      }
+      );
+    }catch(err){
+      console.error(err);
+    }
+  }  
+  
   return (
     <>
    <div className='flex justify-start h-[100vh] bg-pink-200 pt-[5%]'>
@@ -105,7 +135,7 @@ export const Heropic = () => {
       </div>
     </div>
    </div>
-   {/* ///////////////////////// */}
+   {/* ///////////////////////// what the school will get*/}
    <div className='flex justify-start h-[90vh]'>
     <div className='pl-[5%] basis-[100%]'>
     <h1 className='text-pink-900 font-bold ml-[7%]'>What school will get</h1>
@@ -138,7 +168,7 @@ export const Heropic = () => {
       <img src='assests/school image.png' className='h-[70vh] mt-20 object-cover'/>
     </div>
    </div>
-   {/* testimonials */}
+   {/* testimonials what people say about us*/}
    <div className='bg-pink-200 h-[60vh] pl-[5%]'>
     <h1 className='text-pink-900'>Testimonials</h1>
     <p className='text-3xl font-bold '>We are happy to share our<br/> clients' stories</p>
@@ -164,20 +194,20 @@ export const Heropic = () => {
    <div id='contact' className='bg-pink-900 flex justify-start h-[88vh] w-[80%] m-20 p-[5%]'>
     <div className=' h-[70vh] basis-[100%] text-white'>
       <h1 className='text-gray-200'>Get in touch</h1>
-      <h1 className='text-3xl font-bold'>Let us make chool commuting easier and safer</h1>
+      <h1 className='text-3xl font-bold'>Let us make school commuting easier and safer</h1>
       <p className='text-gray-300'>If you have any inquiries about anything about our system, please feel free to contact us.</p>
       <form className='w-full bg-pink-900 mt-10'>
         <div className='flex justify-normal'>
-          <input placeholder='name' type='text ' className='bg-gray-400 placeholder:text-black outline-none px-2 py-2 m-3'  />
-          <input placeholder='Email' type='email' className='bg-gray-400  placeholder:text-black outline-none px-2 py-2 m-3' />
+          <input placeholder='name' type='text 'onChange={(e)=>setName(e.target.value)}   className='bg-gray-400 placeholder:text-black outline-none px-2 py-2 m-3'  />
+          <input placeholder='Email' type='email' onChange={(e)=>setEmail(e.target.value)}  className='bg-gray-400  placeholder:text-black outline-none px-2 py-2 m-3' />
         </div>
         <div className='flex justify-normal'>
-          <input placeholder='Phone ' type='number' className='bg-gray-400  placeholder:text-black outline-none px-2 py-2 m-3' />
-          <input placeholder='Who am I?' type='text' className='bg-gray-400  placeholder:text-black outline-none px-2 py-2 m-3' />
+          <input placeholder='Phone ' type='number' onChange={(e)=>setPhone(e.target.value)}  className='bg-gray-400  placeholder:text-black outline-none px-2 py-2 m-3' />
+          <input placeholder='Who am I?' type='text' onChange={(e)=>setTitle(e.target.value)} className='bg-gray-400  placeholder:text-black outline-none px-2 py-2 m-3' />
         </div>
         <div>
-          <textarea placeholder='Message' className='bg-gray-400  placeholder:text-black outline-none px-2 py-2 m-3 w-[100%]'/>
-          <button className='bg-white text-black py-1 px-2 w-30 font-bold rounded-full'>Submit</button>
+          <textarea placeholder='Message' onChange={(e)=>setText(e.target.value)}  className='bg-gray-400  placeholder:text-black outline-none px-2 py-2 m-3 w-[100%]'/>
+          <button className='bg-white text-black py-1 px-2 w-30 font-bold rounded-full pointer-cursor' onClick={submitHandler} >Submit</button>
         </div>
       </form>
     </div>
