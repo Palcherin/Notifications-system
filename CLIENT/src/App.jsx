@@ -19,8 +19,8 @@ function App() {
       <Navbar/>
       <BrowserRouter>
         <Routes>
-        <Route path='/' element={ <Account /> } />
-          <Route path='/home' element={ <Home/> } />
+        <Route path='/' element={ <Home /> } />
+          <Route path='/account' element={ <Account/> } />
           <Route path='/notification' element={ <Notification /> } />
           <Route path='/location' element={ <Location /> } />
           <Route path='/chatroom' element={ <Chatroom /> } />
