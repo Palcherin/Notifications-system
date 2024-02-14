@@ -121,7 +121,7 @@ function RegisterAndLogin() {
     history("/reset");
   }
   return (
-    <div className="login-page">
+    <div className="bg-blue-700 pl-[30%] ">
       {/* Registration and login Screen */}
       <div className="row">
         <div
@@ -141,11 +141,11 @@ function RegisterAndLogin() {
       <form onSubmit={(e) => handleSubmit(e, login ? "signin" : "signup")}>
         <input name="email" placeholder="Email" />
         <br />
-        <input name="password" type="text" placeholder="Password" />
+        <input name="password" type="text" placeholder="Password" className="bg-red-400"/>
         <br />
         <p onClick={handleReset}>Forgot Password?</p>
         <br />
-        <button>{login ? "SignIn" : "SignUp"}</button>
+        <button className="bg-red-400">{login ? "SignIn" : "SignUp"}</button>
       </form>
     </div>
   );

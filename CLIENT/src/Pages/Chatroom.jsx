@@ -21,15 +21,28 @@ export const Chatroom=() =>{
   
 
   return (
-    <div className="chat-room">
+    <>
+       <div className='flex justify-start h-[100vh] bg-pink-200 pt-[5%]'>
+    <div className='h-[90%] basis-[100%]'>
+      <img src='assests/home pic.png' className='h-[80vh]'/>
+    </div>
+    <div className='basis-[100%] pt-[15%]'>
+      <h1 className='text-5xl font-bold'>The Quintessential<br/> School Bus Application</h1>
+      <p className='text-xl'>A powerful tool to make school commuting easier and safer</p>
+      {/* <img src='assests/ic6.svg' className='animate-spin ml-[20%]'/> */}
+      <button className='bg-pink-900 px-6 py-2 mt-10 tect-xl font-bold hover:bg-pink-800 rounded-full'>Get Started</button>
+    </div>
+   </div>
+    <div className="bg-pink-100 h-[100vh] flex justify-evenly gap-10 p-[2%]">
+      <div className="basis-[100%] pl-[4%]">
       {!showChat ? (
         <div className="joinChatContainer">
           <div className="chat-intro">
-          <h1>Come, Let's Talk</h1>
-          <p>We understand of your concern towards your children's safety and well being everytime. Thats why we let you channel your concern to the right olace everytime you have one. Fill the form below, with your name and the group you want to adress as the room i.e (teachers,staff,parents e.t.c). Your message will be replied to by the concerned party as soon as possible.</p>
+          <h1 className="font-bold text-2xl text-pink-900">Come, Let's Talk</h1>
+          <p className="w-[80%]">We understand of your concern towards your children's safety and well being everytime. Thats why we let you channel your concern to the right olace everytime you have one.</p>
           <h5>Talk to us, Live without worries </h5>
           </div>
-          <h3>Join Chat</h3>
+          <h3 className="text-pink-900 font-serif font-bold">Join Chat</h3>
           <input
             type="text"
             id="name"
@@ -46,12 +59,22 @@ export const Chatroom=() =>{
               setRoom(event.target.value);
             }}
           /><br/>
-          <button onClick={joinRoom} className="button">Join A Room</button>
+          <button onClick={joinRoom} className="bg-pink-900 py-2 px-4 w-[50%] text-xl font-bold">Join A Room</button>
+          <img className="animate-ping mt-10 " src="assests/ic4.svg" />
         </div>
       ) : (
         <Chat socket={socket} username={username} room={room} />
       )}
+      </div>
+      <div className="justify-[100%] h-[90vh] pr-[8%] w-full">
+        <img src="assests/parent image.png" className="h-[90vh] object-cover" />
+        <div>
+         
+         
+        </div>
+      </div>
     </div>
+    </>
   );
 }
 

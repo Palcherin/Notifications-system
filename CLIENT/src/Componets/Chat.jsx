@@ -36,12 +36,12 @@ function Chat({ socket, username, room }) {
  
   return (
     <>
-    <div className="chat-window">
+    <div className="w-full h-[70vh] bg-gray-100 mt-[10%]">
       <div className="chat-header">
         <p>Live Chat</p> 
       </div>
       <div className="chat-container">
-        <ScrollToBottom className="message-container">
+        <ScrollToBottom className="bg-gray-200">
           {messageList.map((messageContent) => {
             return (
               <div
@@ -60,12 +60,15 @@ function Chat({ socket, username, room }) {
               </div>
             );
           })}
+            
         </ScrollToBottom>
+        <div className="">
+       
       </div>
-      <div className="chat-footer">
-        <input
+      <textarea
           type="text"
-          id="text"
+          
+          className=" mt-[70%]  h-[100px] w-[50%] bg-gray-600 sticky"
           value={currentMessage}
           placeholder="Messsage..."
           onChange={(event) => {
@@ -75,7 +78,7 @@ function Chat({ socket, username, room }) {
             event.key === "Enter" && sendMessage();
           }}
         />
-        <button onClick={sendMessage}>&#9658;</button>
+        <button onClick={sendMessage}className="h-[50px] text-pink-900 absolute" >send</button>
       </div>
     </div>
     </>

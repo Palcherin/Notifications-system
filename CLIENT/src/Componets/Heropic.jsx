@@ -1,110 +1,190 @@
 import React from 'react'
 import './Heropic.css'
-import { FaArrowRight } from 'react-icons/fa'
+import { FaArrowRight, FaBell, FaBus, FaClock, FaDirections, FaLocationArrow } from 'react-icons/fa'
 import { Heropictest } from './Heropictest'
 
 
 export const Heropic = () => {
   return (
     <>
-    <div className='home-page'>
-      <div className='top-bar'>
-        <h3>Our Children's Fasety Is Our Priority.😊</h3>
+   <div className='flex justify-start h-[100vh] bg-pink-200 pt-[5%]'>
+    <div className='h-[90%] basis-[100%]'>
+      <img src='assests/home pic.png' className='h-[80vh]'/>
+    </div>
+    <div className='basis-[100%] pt-[15%]'>
+      <h1 className='text-5xl font-bold'>The Quintessential<br/> School Bus Application</h1>
+      <p className='text-xl'>A powerful tool to make school commuting easier and safer</p>
+      {/* <img src='assests/ic6.svg' className='animate-spin ml-[20%]'/> */}
+      <button className='bg-pink-900 px-6 py-2 mt-10 tect-xl font-bold hover:bg-pink-800 rounded-full'>Get Started</button>
+    </div>
+   </div>
+   <div className='bg-white h-fit p-11 border-r-2 '>
+    <h1 className='ml-[40%] text-pink-900 font-bold'>What makes us the best?</h1>
+    <h1 className='ml-[40%] font-bold text-xl'>Key features of our system</h1>
+    <div className='flex justify-normal pl-[10%]'>
+      <div className='shadow-md w-[200px] p-2 m-5'>
+        <img src='assests/route management.png' className='w-[40%] pl-[10%]'/>
+        <h1 className='text-pink-900 font-bold'>Route management</h1>
+        <p>School can eaily manage drop up and pick up routes for the bus</p>
       </div>
-      <div className='heropic'>
-
-        <div className='heropic-intro'>
-          <h1>Welcome to Makini Notification center</h1>
-          <p>Where parents get to know everything they need to knowabout their children</p>
-          <p>Contact available teacher for any inquiries about child's welfare,results and any other issue</p>
-          <button className='btn-primary'>Get Started</button>
-        </div>
-        <div className='heropic-image'>
-          <img src='assests/live-gps-vehicle-tracking-device-min.png' />
-        </div>
+      <div className='shadow-md w-[200px] p-2 m-5'>
+        <img src='assests/vehicle tracking.png' className='w-[40%] pl-[10%]'/>
+        <h1 className='text-pink-900 font-bold'>Bus Tracking</h1>
+        <p>School bus can be precisely tracked and monitored in real time</p>
       </div>
-      <div className='intro'> <h1>Explore the services provided</h1> 
-      <div className='underlined'></div></div>
-      <div className='heropic-content '>
-        <div>
-        
-        <div className='bus-tracking'>
-          <div className='tracking-intro'>
-          <img src='assests/schoolbus-tracking-banner.jpg' /> 
-          </div>
-          <div className='tracking-content'>
-          <section>
-          <Heropictest  heading='We care about your peace of mind..' text='We give you the power to track the real time location of the bus,and the routes being used for the best experience.
-              this helps save parents time in waiting for the bus to arrive and also enables timely preparations. School managements 
-              can however ensure route optimization and better maintenance of the bus.
-              This plus other fuctionality of this system will help reduce worries and put more focus on more important things. 
-              You want to track the bus?' />
-            <button className='btn-secondary' ><FaArrowRight /> </button>
-          </section>
-          </div>
-        </div>
-       <div className=''>
-        
+      <div className='shadow-md w-[200px] p-2 m-5'>
+        <img src='assests/notification icon.png' className='w-[40%] pl-[10%]'/>
+        <h1 className='text-pink-900 font-bold'>Notification</h1>
+        <p>Instant sms is sent to parents whwnever the child is dropped or picked up.</p>
+      </div>
+      <div className='shadow-md w-[200px] p-2 m-5'>
+        <img src='assests/route management.png' className='w-[40%] pl-[10%]'/>
+        <h1 className='text-pink-900 font-bold'>Route management</h1>
+        <p>School can eaily m,anage drop up and pick up routes for the bus</p>
+      </div>
+    </div>
+   </div>
+   <div className='w-full h-fit bg-white '>
+   <div className='bg-pink-900 w-[700px] h-[200px]  ml-[20%] mb-10 flex justify-start'>
+    <div className='text-white basis-[100%] p-10'>
+      <h1 className='text-2xl font-bold'>Guaranteed client satsifaction</h1>
+      <p>Our experts have used their expertise to build this powerful tool that has made many in our globe happy</p>
+    </div>
+    <div className='basis-[100%]'>
+      <div className='flex justify-start p-8 text-white'>
+      <section>
+      <h1 className='font-bold text-2xl'>20+</h1>
+      <p>schools happy</p>
+      </section>
+      <section>
+      <h1 className='font-bold text-2xl'>10+</h1>
+      <p>Counties </p>
+      </section>
+      </div>
+      <div className='flex justify-start  text-white'>
+      <section>
+      <h1 className='font-bold text-2xl'>2000+</h1>
+      <p>Parents Happy</p>
+      </section>
+      <section>
+      <h1 className='font-bold text-2xl'>20+</h1>
+      <p>Drivers happy</p>
+      </section>
+      </div>
+     
+    </div>
+   </div>
+   </div>
+   <div className='flex justify-start h-[100vh] mt-[100px]'>
+    <div className='basis-[50%] pl-[10%]'>
+      <img src='assests/parent image.png' className='h-[70vh] object-cover'/>
+    </div>
+    <div className=''>
+      <h1 className='text-pink-900 font-bold'>What parents will get</h1>
+      <p>We took into considerations the needs of the parents</p>
+      <div className='flex justify-start bg-pink-100 mb-[50px] w-[70%]'>
+        <img src='assests/ic1.svg' />
+        <section className=''>
+          <h1 className='text-pink-900'>Live Tracking of school Bus</h1>
+          <p>School bus tracking in real time provided and user friendly in a very effective manner.</p>
+        </section>
+      </div>
+      <div className='flex justify-start bg-pink-100 mb-[50px] ml-20 w-[70%]'>
+        <img src='assests/ic2.svg' />
+        <section className=''>
+          <h1 className='text-pink-900'>Live Tracking of school Bus</h1>
+          <p>Instant notifications are sent to parents as sms when students are picked up and dropped off.</p>
+        </section>
+      </div>
+      <div className='flex justify-start bg-pink-100 mb-[50px] w-[70%]'>
+        <img src='assests/ic3.svg' />
+        <section className='w-[60%]'>
+          <h1 className='text-pink-900'>In-Chatroom communication</h1>
+          <p>Parents and teachers are able to communicate and chat easily and fast.</p>
+        </section>
+      </div>
+    </div>
+   </div>
+   {/* ///////////////////////// */}
+   <div className='flex justify-start h-[90vh]'>
+    <div className='pl-[5%] basis-[100%]'>
+    <h1 className='text-pink-900 font-bold ml-[7%]'>What school will get</h1>
+      <p className='w-[70%] ml-[7%]'>School will track the bus real time and also other benefits like in-system Chatroom, and notification center.</p>
+      <div className=''>
+      <div className='flex justify-start bg-pink-100 mb-[50px] ml-20 w-[70%] p-3'>
+      <img src='assests/ic4.svg' />
+        <section className=''>
+          <h1 className='text-pink-900'>View trips details</h1>
+          <p>Live tracking of the school bus,ridership data in routes takrn by the bus etc.</p>
+        </section>
+      </div>
+      <div className='flex justify-start bg-pink-100 mb-[50px]  w-[70%] p-3 data-te-animation-on-scroll="repeat"' >
+      <img src='assests/ic5.svg' />
+        <section className=''>
+          <h1 className='text-pink-900'>View trips details</h1>
+          <p>Live tracking of the school bus,ridership data in routes takrn by the bus etc.</p>
+        </section>
+      </div>
+      <div className='flex justify-start bg-pink-100 mb-[50px] ml-20 w-[70%] p-3 mr-10  '>
+      <img src='assests/ic6.svg' />
+        <section className=''>
+          <h1 className='text-pink-900'>View trips details</h1>
+          <p>Live tracking of the school bus,ridership data in routes takrn by the bus etc.</p>
+        </section>
+      </div>
+      </div>
+    </div>
+    <div className='basis-[100%]'>
+      <img src='assests/school image.png' className='h-[70vh] mt-20 object-cover'/>
+    </div>
+   </div>
+   {/* testimonials */}
+   <div className='bg-pink-200 h-[60vh] pl-[5%]'>
+    <h1 className='text-pink-900'>Testimonials</h1>
+    <p className='text-3xl font-bold '>We are happy to share our<br/> clients' stories</p>
+    <div className='flex justify-start '>
+       <div className='bg-pink-100 h-fit w-[300px] p-5 m-10 hover:scale-125 duration-300'>
+        <p>"I really appreciiate what this system have helped us as parents solve the problems we used to face before. I'd really advice any school to adopt this system."</p>
+        <h2 className='font-bold'>Cory</h2>
+        <p>Parents association(Makini school)</p>
        </div>
+       <div className='bg-pink-100 h-fit w-[300px] p-5 m-10 hover:scale-125 duration-300 '>
+        <p>"Initially we used to have problems in having to wait for some students or delaying parents during the eveings. That challenge is no more thanks to this system."</p>
+        <h1 className='font-bold'>Charo</h1>
+        <p>Shool Driver(Makini school)</p>
+       </div>
+       <div className='bg-pink-100 h-fit w-[300px] p-5 m-10 hover:animate-ping-1 hover:scale-125 duration-300'>
+        <p>"Initially we used to have problems in having to wait for some students or delaying parents during the eveings. That challenge is no more thanks to this system."</p>
+        <h1 className='font-bold'>Charo</h1>
+        <p >Shool Driver(Makini school)</p>
+       </div>
+    </div>
+   </div>
+   {/* contact */}
+   <div id='contact' className='bg-pink-900 flex justify-start h-[88vh] w-[80%] m-20 p-[5%]'>
+    <div className=' h-[70vh] basis-[100%] text-white'>
+      <h1 className='text-gray-200'>Get in touch</h1>
+      <h1 className='text-3xl font-bold'>Let us make chool commuting easier and safer</h1>
+      <p className='text-gray-300'>If you have any inquiries about anything about our system, please feel free to contact us.</p>
+      <form className='w-full bg-pink-900 mt-10'>
+        <div className='flex justify-normal'>
+          <input placeholder='name' type='text ' className='bg-gray-400 placeholder:text-black outline-none px-2 py-2 m-3'  />
+          <input placeholder='Email' type='email' className='bg-gray-400  placeholder:text-black outline-none px-2 py-2 m-3' />
+        </div>
+        <div className='flex justify-normal'>
+          <input placeholder='Phone ' type='number' className='bg-gray-400  placeholder:text-black outline-none px-2 py-2 m-3' />
+          <input placeholder='Who am I?' type='text' className='bg-gray-400  placeholder:text-black outline-none px-2 py-2 m-3' />
         </div>
         <div>
-          
-        
-        <div className='chatroom'>
-          <div className='tracking-content'>
-          <section>
-          <Heropictest heading='Chatroom' text='You have a message to pass accross? No worries...this system enables you to send a text to different persons,
-              including teachers, stass and parents too. All you need to do is enter your name and the Room number given for each
-              department or person. Room numbers may vary depending on your recipient.
-              Want to acces the Notification' />
-            <button className='btn-secondary' ><FaArrowRight /> </button>
-          </section>
-          </div>
-          <div className='tracking-intro'>
-          <img src='assests/chatroom.avif' />
-          </div>
+          <textarea placeholder='Message' className='bg-gray-400  placeholder:text-black outline-none px-2 py-2 m-3 w-[100%]'/>
+          <button className='bg-white text-black py-1 px-2 w-30 font-bold rounded-full'>Submit</button>
         </div>
-    
-        </div>
-  
-         
-        <div className='notification'>
-          <div className='tracking-intro'>
-          <h1>Track Bus</h1>
-          <img src='assests/notifications-page.avif' />
-          </div>
-          <div className='tracking-content'>
-          <section>
-          <Heropictest heading='Chatroom'  text='You have a message to pass accross? No worries...this system enables you to send a text to different persons,
-              including teachers, stass and parents too. All you need to do is enter your name and the Room number given for each
-              department or person. Room numbers may vary depending on your recipient.
-              Want to acces the Notification' />
-            <button className='btn-secondary' ><FaArrowRight /> </button>
-          </section>
-          </div>
-        </div>
-        
-        <div className='welfare'>
-          <div className='tracking-content'>
-          <section>
-          <Heropictest heading='Welfare ' text='Send your concers direct to us and we will get back to you as
-              soon as we can. Visit our chat room to send us the message' />
-            <button className='btn-secondary' ><FaArrowRight /> </button>
-          </section>
-          </div>
-          <div className='tracking-intro'>
-          <img src='assests/school-bus-monitoring.jpg' />
-
-          </div>
-        </div>
-      </div>
-      </div>
-      <div className='why-us'>
-         <h1>Why They Choose Us</h1>
-         <p>We have a track record in providing user friendly, fast and easy way to communicate, track and keep track of the children's safety.
-          Join us and be part of a large community (parents and teachers) that are focusing on more serious worries than the bus location. Contact us for more information.
-         </p>
-      </div>
+      </form>
+    </div>
+    <div>
+    <img src='assests/tracking.png' />
+    </div>
+   </div>
     </>
   )
 }
