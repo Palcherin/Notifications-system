@@ -15,6 +15,33 @@ export const Notification = () => {
       <button className='bg-pink-900 px-6 py-2 mt-10 tect-xl font-bold hover:bg-pink-800 rounded-full'  >Get Started</button>
     </div>
    </div>
+   {/* why choose us */}
+   <div className='bg-white h-fit p-11 border-r-2 '>
+    <h1 className='ml-[40%] text-pink-900 font-bold'>What makes us the best?</h1>
+    <h1 className='ml-[40%] font-bold text-xl'>Key features of our system</h1>
+    <div className='flex justify-normal pl-[10%]'>
+      <div className='shadow-md w-[200px] p-2 m-5'>
+        <img src='assests/route management.png' className='w-[40%] pl-[10%]'/>
+        <h1 className='text-pink-900 font-bold'>Route management</h1>
+        <p>School can eaily manage drop up and pick up routes for the bus</p>
+      </div>
+      <div className='shadow-md w-[200px] p-2 m-5'>
+        <img src='assests/vehicle tracking.png' className='w-[40%] pl-[10%]'/>
+        <h1 className='text-pink-900 font-bold'>Bus Tracking</h1>
+        <p>School bus can be precisely tracked and monitored in real time</p>
+      </div>
+      <div className='shadow-md w-[200px] p-2 m-5'>
+        <img src='assests/notification icon.png' className='w-[40%] pl-[10%]'/>
+        <h1 className='text-pink-900 font-bold'>Notification</h1>
+        <p>Instant sms is sent to parents whwnever the child is dropped or picked up.</p>
+      </div>
+      <div className='shadow-md w-[200px] p-2 m-5'>
+        <img src='assests/route management.png' className='w-[40%] pl-[10%]'/>
+        <h1 className='text-pink-900 font-bold'>Route management</h1>
+        <p>School can eaily m,anage drop up and pick up routes for the bus</p>
+      </div>
+    </div>
+   </div>
    <Twilio/>
   </>
   )

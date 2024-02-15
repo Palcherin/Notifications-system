@@ -12,8 +12,8 @@ const Navbar = () => {
     ];
     let [open,setOpen]=useState(false);
   return (
-    <div className='shadow-md w-full bg-pink-200 fixed top-0 left-0'>
-      <div className='md:flex items-center justify-between py-4 md:px-5 px-5'>
+    <div className='shadow-md w-full bg-pink-200 pr-[20%] fixed top-0 left-0'>
+      <div className='md:flex items-center justify-between  py-4 md:px-5 px-5'>
       <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
       text-gray-800'>
         <span className='text-3xl text-indigo-600 mr-1 pt-2'>
