@@ -10,13 +10,14 @@ import { Footer } from './Componets/Footer.jsx';
 import { Contact } from "./Pages/Contact.jsx";
 import Navbar from "./Componets/Navbar/Navbar.jsx";
 import Account from "./Pages/Account.jsx";
+import SignUp from "./Pages/SignUp.jsx";
 
 function App() {
   console.log('page render')
   return (
     
     <div className="App">
-      <Navbar/>
+       <Navbar/>  
       <BrowserRouter>
         <Routes>
         <Route path='/' element={ <Home /> } />
@@ -25,7 +26,8 @@ function App() {
           <Route path='/location' element={ <Location /> } />
           <Route path='/chatroom' element={ <Chatroom /> } />
           <Route path='/wellfare' element={ <Wellfare /> } />
-          <Route path="/contact" element={<Contact/> }/>
+          <Route path="/contact" element={<Contact/> }/> 
+          <Route  path="/signup" element={SignUp}/>
           
         </Routes>
         <Footer/>
