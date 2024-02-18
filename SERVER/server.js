@@ -1,15 +1,12 @@
 const express = require('express');
-const { MessagingResponse } = require('twilio').twiml;
-
+const jwb = require('jsonwebtoken')
+const bodyParser = require('body-parser')
 const app = express();
+const auth = require('./routes/auth')
+app.use(bodyParser.json() )
 
-app.post('/sms', (req, res) => {
-  const twiml = new MessagingResponse();
+app.use('/api',auth)
 
-  twiml.message('The Robots are coming! Head for the hills!');
-
-  res.type('text/xml').send(twiml.toString());
-});
 
 app.listen(3000, () => {
   console.log('Express server listening on port 3000');
