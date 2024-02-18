@@ -10,7 +10,8 @@ import { Footer } from './Componets/Footer.jsx';
 import { Contact } from "./Pages/Contact.jsx";
 import Navbar from "./Componets/Navbar/Navbar.jsx";
 import Account from "./Pages/Account.jsx";
-import SignUp from "./Pages/SignUp.jsx";
+import Registration from "./Pages/Registration.jsx";
+import Login from "./Pages/Login.jsx";
 
 function App() {
   console.log('page render')
@@ -27,7 +28,8 @@ function App() {
           <Route path='/chatroom' element={ <Chatroom /> } />
           <Route path='/wellfare' element={ <Wellfare /> } />
           <Route path="/contact" element={<Contact/> }/> 
-          <Route  path="/signup" element={SignUp}/>
+          <Route  path="/registration" element={Registration}/>
+          <Route path="/login" element={<Login />}/>
           
         </Routes>
         <Footer/>

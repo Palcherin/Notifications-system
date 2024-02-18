@@ -18,7 +18,7 @@ export const Heropic = () => {
       <p className='text-xl'>A powerful tool to make school commuting easier and safer</p>
       {/* <img src='assests/ic6.svg' className='animate-spin ml-[20%]'/> */}
       <button className='bg-pink-900 px-6  text-white py-2 mt-10 tect-xl font-bold hover:bg-pink-800 rounded-full
-      ' onClick={()=>navigate('/signup')}>Get Started</button>
+      ' onClick={()=>navigate('/registration')}>Get Started</button>
     </div>
    </div>
    <div className='bg-white h-fit p-11 border-r-2 '>
