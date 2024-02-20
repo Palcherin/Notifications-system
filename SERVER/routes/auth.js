@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const router = express.Router();
 const bcrypt = require('bcrypt')
 const User = require('../models/user');
-
+const my_secret_key = process.env.JWTKEY
 
 // Registration endpoint
 router.post('/register', async (req, res) => {
@@ -29,7 +29,7 @@ router.post('/register', async (req, res) => {
     console.log(username,role)
 
     // Generate JWT token with user information
-    const token = jwt.sign({ sub: newUser.id, username: newUser.username, role: newUser.role });
+    const token = jwt.sign({ sub: newUser.id, username: newUser.username, role: newUser.role },my_secret_key);
     res.json({ token });
   } catch (error) {
     console.error('Error registering user:', error.message);
