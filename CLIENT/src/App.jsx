@@ -18,7 +18,7 @@ function App() {
   return (
     
     <div className="App">
-       <Navbar/>  
+       
       <BrowserRouter>
         <Routes>
         <Route path='/' element={ <Home /> } />
@@ -28,7 +28,7 @@ function App() {
           <Route path='/chatroom' element={ <Chatroom /> } />
           <Route path='/wellfare' element={ <Wellfare /> } />
           <Route path="/contact" element={<Contact/> }/> 
-          <Route  path="/registration" element={Registration}/>
+          <Route  path="/registration" element={<Registration />}/>
           <Route path="/login" element={<Login />}/>
           
         </Routes>
@@ -38,5 +38,4 @@ function App() {
     
   );
 }
-
 export default App;

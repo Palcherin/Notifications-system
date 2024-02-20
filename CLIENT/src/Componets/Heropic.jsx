@@ -3,12 +3,14 @@ import './Heropic.css'
 import { FaArrowRight, FaBell, FaBus, FaClock, FaDirections, FaLocationArrow } from 'react-icons/fa'
 import { Heropictest } from './Heropictest' 
 import { Navigate, useNavigate } from 'react-router-dom'
+import Navbar from './Navbar/Navbar'
 
 
 export const Heropic = () => {
   const navigate = useNavigate()
   return (
     <>
+    <Navbar />
    <div className='flex justify-start h-[100vh] bg-pink-200 pt-[5%]'>
     <div className='h-[90%] basis-[100%]'>
       <img src='assests/home pic.png' className='h-[80vh]'/>
