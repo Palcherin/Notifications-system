@@ -1,4 +1,5 @@
 import React from 'react'
+import {Maps} from '../Componets/Maps'
 
 export const Contact = () => {
   return (
@@ -8,7 +9,9 @@ export const Contact = () => {
             <h1>Want to Talk?</h1>
             <p>We understand some issues are rather directly communicated to us. Thats why we listen to you whenever you want to talk to us. Fill the form below and we will be ready to listen to any of your concerns</p>
         </div>
-        <div className='contact-pic'></div>
+        <div className='contact-pic'>
+          <Maps/>
+        </div>
     </div>
     </>
   )
