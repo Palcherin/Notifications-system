@@ -8,12 +8,14 @@ const Navbar = () => {
       {name:"ChatRoom",link:"/chatroom"},
       {name:"NOTIFY",link:"/notification"},
       {name:"ABOUT US",link:"/about"},
-      {name:"CONTACT",link:"/contact"},
+      {name:"T",link:"/contact"},
     ];
     let [open,setOpen]=useState(false);
   return (
+
     <div className='shadow-md w-full bg-pink-900 fixed top-0 left-0'>
       <div className='md:flex items-center justify-between py-4 md:px-5 px-5'>
+
       <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
       text-white'>
         <span className='text-3xl text-indigo-600 mr-1 pt-2'>
@@ -35,7 +37,7 @@ const Navbar = () => {
           ))
         }
         <Button >
-          Book
+          TRACK
         </Button>
       </ul>
       </div>
