@@ -10,7 +10,7 @@ const Twilio = () => {
     try {
       // Split the phone numbers into an array
       const phoneNumbersArray = numbers.split(',');
-
+ 
       // Iterate through phone numbers and send SMS
       for (const phoneNumber of phoneNumbersArray) {
         await sendSms(phoneNumber, message);
@@ -29,7 +29,7 @@ const Twilio = () => {
     // Use the appropriate library and API endpoint based on your SMS gateway provider
     try {
       // Example using axios and Twilio
-      const endpoint = `https://api.twilio.com/2010-04-01/Accounts/ACcc651cab6ead886b4fb3c47091271c20/Messages`;
+      const endpoint = `https://api.twilio.com/2010-04-01/Accounts/ACcc651cab6ead886b4fb3c47091271c20/${message}`;
       // US0f9a43cdacbb2809a27e08185a5834c5
       const response = await axios.post(
         endpoint,
@@ -57,7 +57,7 @@ const Twilio = () => {
   };
 
   return (
-    <div className='block bg-slate-100 w-[500px] h-[50vh] pl-20'>
+    <div className='block bg-slate-100 w-[500px]  pl-20'>
       <label>Phone Numbers (comma-separated):</label><br/>
       <input type="text" value={numbers} onChange={(e) => setNumbers(e.target.value)} className='h-[50px]'/><br/>
 

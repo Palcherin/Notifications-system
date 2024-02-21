@@ -4,7 +4,7 @@ import Button from './Button';
 
 const Navbar = () => {
     let Links =[
-      {name:"HOME",link:"/home"},
+      {name:"HOME",link:"/"},
       {name:"ChatRoom",link:"/chatroom"},
       {name:"NOTIFY",link:"/notification"},
       {name:"ABOUT US",link:"/about"},
@@ -12,14 +12,16 @@ const Navbar = () => {
     ];
     let [open,setOpen]=useState(false);
   return (
-    <div className='shadow-md w-full bg-pink-200 pr-[20%] fixed top-0 left-0'>
-      <div className='md:flex items-center justify-between  py-4 md:px-5 px-5'>
+
+    <div className='shadow-md w-full bg-pink-900 fixed top-0 left-0'>
+      <div className='md:flex items-center justify-between py-4 md:px-5 px-5'>
+
       <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
-      text-gray-800'>
+      text-white'>
         <span className='text-3xl text-indigo-600 mr-1 pt-2'>
         <ion-icon name="logo-ionic"></ion-icon>
         </span>
-        BusHub
+        <strong>BusHub</strong>
       </div>
       
       <div onClick={()=>setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
@@ -30,7 +32,7 @@ const Navbar = () => {
         {
           Links.map((link)=>(
             <li key={link.name} className='md:ml-8 text-xl md:my-0 my-7'>
-              <a href={link.link} className='text-gray-800 hover:text-gray-400 duration-500'>{link.name}</a>
+              <a href={link.link} className='text-white hover:text-gray-400 duration-500'>{link.name}</a>
             </li>
           ))
         }

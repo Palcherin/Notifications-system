@@ -1,6 +1,13 @@
 import React, { useState } from 'react'
 import './Heropic.css'
 import { FaArrowRight, FaBell, FaBus, FaClock, FaDirections, FaLocationArrow } from 'react-icons/fa'
+
+import { Navigate, useNavigate } from 'react-router-dom'
+import Navbar from './Navbar/Navbar'
+
+
+export const Heropic = () => {
+  const navigate = useNavigate
 import { Heropictest } from './Heropictest'
 import {db} from '../config/firebase'
 import { getDocs, collection, addDoc} from 'firebase/firestore';
@@ -34,9 +41,10 @@ export const Heropic = () => {
       console.error(err);
     }
   }  
-  
+ 
   return (
     <>
+    <Navbar />
    <div className='flex justify-start h-[100vh] bg-pink-200 pt-[5%]'>
     <div className='h-[90%] basis-[100%]'>
       <img src='assests/home pic.png' className='h-[80vh]'/>
@@ -45,7 +53,8 @@ export const Heropic = () => {
       <h1 className='text-5xl font-bold'>The Quintessential<br/> School Bus Application</h1>
       <p className='text-xl'>A powerful tool to make school commuting easier and safer</p>
       {/* <img src='assests/ic6.svg' className='animate-spin ml-[20%]'/> */}
-      <button className='bg-pink-900 px-6 py-2 mt-10 tect-xl font-bold hover:bg-pink-800 rounded-full'>Get Started</button>
+      <button className='bg-pink-900 px-6  text-white py-2 mt-10 tect-xl font-bold hover:bg-pink-800 rounded-full
+      ' onClick={()=>navigate('/registration')}>Get Started</button>
     </div>
    </div>
    <div className='bg-white h-fit p-11 border-r-2 '>

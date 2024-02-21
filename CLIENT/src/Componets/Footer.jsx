@@ -4,7 +4,7 @@ import { FaBus } from 'react-icons/fa'
 export const Footer = () => {
   return (
     <>
-    <div className='footer'>
+    <div className='footer bg-pink-900'>
     <div className='col-1'>
       <a href='/'>Home</a><br/>
       <a href='/'>Track Bus</a><br/>
