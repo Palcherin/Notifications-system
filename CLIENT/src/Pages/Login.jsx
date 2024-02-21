@@ -1,18 +1,24 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-
+  const navigate = useNavigate()
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://localhost:3001/api/login', { username, password });
+      const response = await axios.post('http://localhost:3000/api/login', { username, password });
 
       const data = response.data;
       console.log('Token:', data.token);
+      // Set the token in the request headers
+    axios.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
 
       // Handle success, e.g., redirect to another page
+      navigate('/chatroom')
+
+    
     } catch (error) {
       console.error('Login failed:', error);
     }
