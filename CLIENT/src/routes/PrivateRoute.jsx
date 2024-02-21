@@ -1,19 +1,9 @@
-import React, { useEffect } from 'react';
-import { useNavigate, Route } from 'react-router-dom';
+import { Outlet, Navigate } from 'react-router-dom'
+import { useAuth } from '../Componets/Auth/useAuth'
 
-const PrivateRoute = ({ element: Component, ...rest }) => {
-  const navigate = useNavigate();
+function PrivateRoutes() {
+    const token = useAuth()
+    return token ? <Outlet /> : <Navigate to='/login' />
+}
 
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-
-    if (!token) {
-      // Redirect to the login page if the token is not present
-      navigate('/login');
-    }
-  }, [navigate]);
-
-  return <Route {...rest} element={localStorage.getItem('token') ? <Component /> : null} />;
-};
-
-export default PrivateRoute;
+export default PrivateRoutes
