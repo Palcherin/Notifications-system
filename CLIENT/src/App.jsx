@@ -22,12 +22,15 @@ function App() {
       <BrowserRouter>
         <Routes>
         <Route path='/' element={ <Home /> } />
-          <Route path='/account' element={ <Account/> } />
+        
+        <Route path='/account' element={ <Account/> } />
           <Route path='/notification' element={ <Notification /> } />
           <Route path='/location' element={ <Location /> } />
           <Route path='/chatroom' element={ <Chatroom /> } />
-          <Route path='/wellfare' element={ <Wellfare /> } />
-          <Route path="/contact" element={<Contact/> }/> 
+          <Route path='wellfare' element={ <Wellfare /> } />
+          <Route path="contact" element={<Contact/> }/> 
+        
+          
           <Route  path="/registration" element={<Registration />}/>
           <Route path="/login" element={<Login />}/>
           

@@ -17,6 +17,8 @@ const Registration = () => {
 
       const data = response.data;
       console.log('Token:', data.token);
+      localStorage.setItem("token",data.token)
+    
 
       // Handle success, 
       navigate('/login')
@@ -55,7 +57,7 @@ const Registration = () => {
             <option value="parent">Parent</option>
           </select>
         </label>
-        <button onClick={handleRegister} className="bg-pink-900 text-white py-2 px-4 rounded">
+        <button onClick={handleRegister} className="bg-pink-900 w-full text-white py-2 px-4 rounded">
           Register
         </button>
       </div>

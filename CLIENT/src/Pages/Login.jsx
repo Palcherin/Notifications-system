@@ -40,7 +40,7 @@ const Login = () => {
             className="w-full p-2 border rounded mt-1"
           />
         </label>
-        <button onClick={handleLogin} className="bg-pink-900 text-white py-2 px-4 rounded">
+        <button onClick={handleLogin} className="bg-pink-900 w-full text-white py-2 px-4 rounded">
           Login
         </button>
       </div>
