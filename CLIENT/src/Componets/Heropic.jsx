@@ -1,19 +1,18 @@
 import React, { useState } from 'react'
 import './Heropic.css'
-import { FaArrowRight, FaBell, FaBus, FaClock, FaDirections, FaLocationArrow } from 'react-icons/fa'
-
-import { Navigate, useNavigate } from 'react-router-dom'
-import Navbar from './Navbar/Navbar'
-
-
-export const Heropic = () => {
-  const navigate = useNavigate
 import { Heropictest } from './Heropictest'
 import {db} from '../config/firebase'
 import { getDocs, collection, addDoc} from 'firebase/firestore';
 
+import { FaArrowRight, FaBell, FaBus, FaClock, FaDirections, FaLocationArrow } from 'react-icons/fa'
+
+import { Navigate, useNavigate } from 'react-router-dom'
+import Navbar from './Navbar/Navbar';
+
+
 
 export const Heropic = () => {
+  const navigate = useNavigate()
   event.preventDefault();
   const [name, setName]=useState("");
   const [email, setEmail]=useState("");

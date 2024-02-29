@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
-const router = express.Router();
 const http = require("http");
+const router = express.Router();
 const cors = require("cors");
 const { Server } = require("socket.io");
 app.use(cors());
@@ -31,10 +31,7 @@ io.on("connection", (socket) => {
   });
 });
 
-// server.listen(5050, () => {
-//   console.log('SERVER IS RUNNING');
-// });
-module.exports=router;
+module.exports = router;
 
 // const express=require('express');
 // const app=express();

@@ -6,6 +6,9 @@ require('dotenv').config();
 const app = express();
 const mongoose = require('mongoose');
 const auth = require('./routes/auth');
+const twilio=require('./routes/Twilio');
+const socket=require('./routes/Socket')
+
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
@@ -38,6 +41,8 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api', auth);
+app.use('/api',twilio);
+app.use('/api', socket);
 
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`);
