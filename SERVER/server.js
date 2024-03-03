@@ -7,15 +7,22 @@ const app = express();
 const mongoose = require('mongoose');
 const auth = require('./routes/auth');
 const PORT = process.env.PORT || 3000;
-
 app.use(cors());
 app.use(bodyParser.json());
 
+// Restful api's
+// crud operations
+// methods
+// get
+// post
+// delete
+// put
+// patch
+
+
+
 // connect to MongoDB
-
 const uri = process.env.MONGO_URI
-
-
 async function connect() {
   try {
     await mongoose.connect(uri, {useNewUrlParser: true,

@@ -4,16 +4,17 @@ import { FaArrowRight, FaBell, FaBus, FaClock, FaDirections, FaLocationArrow } f
 
 import { Navigate, useNavigate } from 'react-router-dom'
 import Navbar from './Navbar/Navbar'
-
-
-export const Heropic = () => {
-  const navigate = useNavigate
 import { Heropictest } from './Heropictest'
 import {db} from '../config/firebase'
 import { getDocs, collection, addDoc} from 'firebase/firestore';
 
 
 export const Heropic = () => {
+  const navigate = useNavigate()
+
+
+
+// export const Heropic = () => {
   event.preventDefault();
   const [name, setName]=useState("");
   const [email, setEmail]=useState("");
