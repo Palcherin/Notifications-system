@@ -31,10 +31,10 @@ io.on("connection", (socket) => {
   });
 });
 
-// server.listen(5050, () => {
-//   console.log('SERVER IS RUNNING');
-// });
-module.exports=router;
+server.listen(5050, () => {
+  console.log('SERVER IS RUNNING');
+});
+
 
 // const express=require('express');
 // const app=express();

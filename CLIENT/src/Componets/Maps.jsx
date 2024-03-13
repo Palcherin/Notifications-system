@@ -1,28 +1,49 @@
-import React, { useState } from 'react'
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 
-const API_endpoint=`https://api.openweathermap.org/data/3.0/onecall?`
-const API_key=`fce00ed2f5d4fc0d2fc7a80d8ee6daa1`
+import GoogleMapReact from 'google-map-react';
+// import 'google-map-react/dist/index.css'
+
+import LOS_ANGELES_CENTER from './const/la_center';
+
+import Marker from './Marker';
+
+const Wrapper = styled.main`
+  width: 100%;
+  height: 100%;
+`;
+
 export const Maps = () => {
-    const [latitude, setLatitudde]=useState('');
-    const [longitude, setLongitude]=useState("");
-    React.useEffect(()=>{
-        navigator.geolocation.getCurrentPosition((position)=>{
-            setLatitudde(position.coords.latitude);
-            setLongitude(position.coords.longitude);
-        });
-        axios.get(`${API_endpoint} 
-        laT=${latitude}& lon=${longitude}
-        &exclude=hourly,daily&appid=${API_key}
-     }`).then((response)=>{
-        console.log(response.data)
-     })
-    },[latitude, longitude])
-  return (
-    <div>
-      <h1>hello</h1>
-    </div>
-  )
-}
+  const [places, setPlaces] = useState([]);
 
+  const fetchPlaces = async () => {
+    fetch('places.json')
+      .then((response) => response.json())
+      .then((data) => setPlaces(data.results));
+  };
+
+  useEffect(() => {
+    fetchPlaces();
+  }, []);
+
+  if (!places || places.length === 0) {
+    return null;
+  }
+
+  return (
+    <Wrapper>
+      <GoogleMapReact defaultZoom={10} defaultCenter={LOS_ANGELES_CENTER}>
+        {places.map((place) => (
+          <Marker
+            key={place.id}
+            text={place.name}
+            lat={place.geometry.location.lat}
+            lng={place.geometry.location.lng}
+          />
+        ))}
+      </GoogleMapReact>
+      console.log(`${lat}`)
+    </Wrapper>
+  );
+};
 

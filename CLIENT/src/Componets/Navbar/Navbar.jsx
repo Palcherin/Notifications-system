@@ -8,7 +8,7 @@ const Navbar = () => {
       {name:"ChatRoom",link:"/chatroom"},
       {name:"NOTIFY",link:"/notification"},
       {name:"ABOUT US",link:"/about"},
-      {name:"T",link:"/contact"},
+      {name:"Find Bus",link:"/location"},
     ];
     let [open,setOpen]=useState(false);
   return (
