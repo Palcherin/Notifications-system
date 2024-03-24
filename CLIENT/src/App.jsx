@@ -13,13 +13,14 @@ import Account from "./Pages/Account.jsx";
 import Registration from "./Pages/Registration.jsx";
 import Login from './pages/Login.jsx'
 import RegisterAndLogin from "./Componets/Auth/Login.jsx";
+import Profile from "./Pages/Profile.jsx";
 
 function App() {
   console.log('page render')
   return (
     
     <div className="App">
-      <Navbar/>
+      {/* <Navbar/> */}
       <BrowserRouter>
         <Routes>
         <Route path='/' element={ <Home /> } />
@@ -31,8 +32,9 @@ function App() {
           <Route path="/contact" element={<Contact/> }/>
           <Route path="/registration" element= {<Registration/> }/>
           <Route path="/login" element={<Login/> }/>
+          <Route path="/profile" element={<Profile />} />
         </Routes>
-        <Footer/>
+        {/* <Footer/> */}
       </BrowserRouter>
     </div>
     
