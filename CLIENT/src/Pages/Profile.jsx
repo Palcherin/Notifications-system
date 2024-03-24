@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Profile() {
   return (
     <>
-      <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+      <nav className="fixed top-0 z-50 w-full bg-pink-900 border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
         <div className="px-3 py-3 lg:px-5 lg:pl-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center justify-start rtl:justify-end">
@@ -30,19 +30,19 @@ export default function Profile() {
                   ></path>
                 </svg>
               </button>
-              {/* <a href="https://flowbite.com" className="flex ms-2 md:me-24">
+               <a href="https://flowbite.com" className="flex ms-2 md:me-24">
                 <img
                   src="https://flowbite.com/docs/images/logo.svg"
                   className="h-8 me-3"
                   alt="FlowBite Logo"
                 />
-                <span className="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">
-                  Flowbite
+                <span className="text-white self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">
+                  Bus Hub
                 </span>
-              </a> */}
+              </a> 
             </div>
             <div className="flex items-center">
-              <div className="flex items-center ms-3">
+              <div className="flex items-center text-white ms-3">
                 <div>
                   <button
                     type="button"
@@ -123,11 +123,11 @@ export default function Profile() {
 
       <section
         id="logo-sidebar"
-        className="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+        className="fixed ml-[-0.0rem] bg-pink-900 top-0 left-0 z-40 w-64 h-screen  transition-transform -translate-x-full  border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
         aria-label="Sidebar"
       >
-        <div className="bg-pink-900 h-full px-3 pb-4 overflow-y-auto text-white  dark:bg-gray-800">
-          <ul className="space-y-2 font-medium text-white">
+        <div className=" h-full px-3 pt-20 overflow-y-auto text-white  dark:bg-gray-800">
+          <ul className="flex  flex-col space-y-[2rem] font-medium text-white">
             <li>
               <a
                 href="#"
@@ -143,7 +143,7 @@ export default function Profile() {
                   <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
                   <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
                 </svg>
-                <span className="ms-3 text-white"><Link>Home</Link></span>
+                <span className="ms-3hover:text-pink-900 text-white"><Link>Home</Link></span>
               </a>
             </li>
             <li>
