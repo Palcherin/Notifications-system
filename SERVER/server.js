@@ -1,5 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const socketIO = require('socket.io');
+const http = require('http');
 const cors = require('cors');
 
 require('dotenv').config();
@@ -8,6 +10,10 @@ const mongoose = require('mongoose');
 const auth = require('./routes/auth');
 const twilio=require('./routes/Twilio');
 const socket=require('./routes/Socket')
+const server = http.createServer(app);
+const { Server } = require("socket.io");
+// const io = socketIO(server);
+const Message = require('./models/Message');
 
 const PORT = process.env.PORT || 3000;
 
@@ -32,6 +38,32 @@ async function connect() {
 
 connect();
 
+
+// socket
+const io = new Server(server, {
+  cors: {
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST"],
+  },
+});
+io.on("connection", (socket) => {
+  console.log(`User connected ${socket.id}`);
+
+  socket.on("join_room", (data) => {
+    socket.join(data);
+    console.log(`User with ID: ${socket.id} joined room: ${data}`);
+  });
+  socket.on("send_message", (data) => {
+    socket.to(data.room).emit("receive_message", data);
+    
+  });
+
+  socket.on("disconnect", () => {
+    console.log("User Disconnected", socket.id);
+  });
+});
+
+
 app.get('/', (req, res) => {
   const status = {
     "status": "running"
@@ -42,8 +74,8 @@ app.get('/', (req, res) => {
 
 app.use('/api', auth);
 app.use('/api',twilio);
-app.use('/api', socket);
 
-app.listen(PORT, () => {
+
+server.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`);
 });

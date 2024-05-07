@@ -1,8 +1,8 @@
 .chat-window{
-    width: 300px;
-    height: 420px;
+    width: 400px;
+    min-height: 420px;
     background: #eee;
-    
+    max-height:fit-content ;
 }
 
 .chat-header{
@@ -44,14 +44,16 @@
     width: auto;
     height: auto;
     min-height: 40px;
-    max-width: 120px;
-    background-color: #263238;
+    max-width: 300px;
+    background-color: greenyellow;
     border-radius: 5px;
     color: white;
-    display: flex;
+    font-weight: bold;
     align-items: center;
     margin-right: 5px;
-    margin-left: 5px;
+    display: block;
+    margin-left: 70%;
+    margin-top: 20px;
     padding-right: 5px;
     padding-left: 5px;
     overflow-wrap: break-word;
@@ -64,9 +66,12 @@
   .message-meta #time, #author {
     font-size: 10px;
     font-weight: bold;
+    display:block;
+    
   }
   #you{
     justify-content: flex-start;
+   
   }
   #you .message-content {
     justify-content: flex-start;
@@ -84,6 +89,7 @@
   #other .message-content {
     justify-content: flex-end;
     background-color: cornflowerblue;
+    margin-left: 2%;
   }
   
   #other .message-meta {
@@ -111,4 +117,11 @@
   }
   .chat-window .chat-body .message-container::-webkit-scrollbar {
     display: none;
+  }
+  .message.sent .message-content p {
+    color: blue; /* or any other color you prefer for sent messages */
+  }
+  
+  .message.received .message-content p {
+    color: green; /* or any other color you prefer for received messages */
   }

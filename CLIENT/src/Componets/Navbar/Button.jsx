@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Button = () => {
+const Button = (props) => {
   return (
-    <div>
-      
-    </div>
+    <button className='bt-indigo text-white font-[poppins] py-2 px-6 rounded md:ml-8 hover:bg-indigo-400 duration-500' >
+      {props.children}
+    </button>
   )
 }
 

@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
-import { useNavigate, Route } from 'react-router-dom';
+import { useNavigate, Route, Outlet } from 'react-router-dom';
+import { Home } from '../Pages/Home';
 
-const PrivateRoute = ({ element: Component, ...rest }) => {
+const PrivateRoute = ({ element: Component, ...rest }, props) => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -13,7 +14,7 @@ const PrivateRoute = ({ element: Component, ...rest }) => {
     }
   }, [navigate]);
 
-  return <Route {...rest} element={localStorage.getItem('token') ? <Component /> : null} />;
+  return <Route {...rest} element={localStorage.getItem('token') ? <Component {...props} /> : null} />;
 };
 
 export default PrivateRoute;

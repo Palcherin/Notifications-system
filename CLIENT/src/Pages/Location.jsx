@@ -85,6 +85,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { useMapEvents } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { Icon, divIcon, point } from "leaflet";
+import Navbar from '../Componets/Navbar/Navbar';
 
 function LocationMarker() {
   const [position, setPosition] = useState(null);
@@ -100,13 +101,15 @@ function LocationMarker() {
 
   return position === null ? null : (
     <Marker position={position}>
-      <Popup>The bus is currently here moving from Misufini, Will be in Kibaoni in 10 minutes</Popup>
+      <Popup>The bus is currently here moving from A, Will be in B in 10 minutes</Popup>
     </Marker>
   );
 }
 
 function Location() {
   return (
+    <>
+    <Navbar/>
     <MapContainer
       center={{ lat: -3.61676, lng: 39.84249 }}
       zoom={15}
@@ -119,6 +122,7 @@ function Location() {
       />
       <LocationMarker />
     </MapContainer>
+    </>
   );
 }
 

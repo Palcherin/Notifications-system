@@ -19,6 +19,7 @@ export const Heropic = () => {
   const [phone,setPhone]=useState("")
   const [text, setText]=useState("");
   const [title, setTitle]= useState("");
+ 
 
 
 
@@ -30,10 +31,11 @@ export const Heropic = () => {
     await addDoc( textCollectioneRef,
       {
         Name:name,
-        Email:email,
+        Email:email, 
         Select:phone,
         Text:text,
-        title:title
+        title:title,
+        
       }
       );
     }catch(err){
@@ -44,7 +46,10 @@ export const Heropic = () => {
   return (
     <>
     <Navbar />
-   <div className='flex justify-start h-[100vh] bg-pink-200 pt-[5%]'>
+   <div className='flex justify-start h-[100vh] pt-[5%]'
+    style={{
+      background: "linear-gradient(to right, #38a169, #2f855a, #276749, #22543d)"
+  }}>
     <div className='h-[90%] basis-[100%]'>
       <img src='assests/home pic.png' className='h-[80vh]'/>
     </div>
@@ -83,7 +88,10 @@ export const Heropic = () => {
     </div>
    </div>
    <div className='w-full h-fit bg-white '>
-   <div className='bg-pink-900 w-[700px] h-[200px]  ml-[20%] mb-10 flex justify-start'>
+   <div className='w-[700px] h-[200px]  ml-[20%] mb-10 flex justify-start'
+     style={{
+      background: "linear-gradient(to right, #38a169, #2f855a, #276749, #22543d)"
+  }}>
     <div className='text-white basis-[100%] p-10'>
       <h1 className='text-2xl font-bold'>Guaranteed client satsifaction</h1>
       <p>Our experts have used their expertise to build this powerful tool that has made many in our globe happy</p>
@@ -199,19 +207,22 @@ export const Heropic = () => {
     </div>
    </div>
    {/* contact */}
-   <div id='contact' className='bg-pink-900 flex justify-start h-[88vh] w-[80%] m-20 p-[5%]'>
-    <div className=' h-[70vh] basis-[100%] text-white'>
+   <div id='contact' className='bg-pink-900 flex justify-start h-[88vh] w-[80%] m-20 p-[5%]'
+     style={{
+      background: "linear-gradient(to right, #38a169, #2f855a, #276749, #22543d)"
+  }}>
+    <div className='  basis-[100%] text-white'>
       <h1 className='text-gray-200'>Get in touch</h1>
       <h1 className='text-3xl font-bold'>Let us make school commuting easier and safer</h1>
       <p className='text-gray-300'>If you have any inquiries about anything about our system, please feel free to contact us.</p>
-      <form className='w-full bg-pink-900 mt-10'>
+      <form className='w-full mt-5'>
         <div className='flex justify-normal'>
-          <input placeholder='name' type='text 'onChange={(e)=>setName(e.target.value)}   className='bg-gray-400 placeholder:text-black outline-none px-2 py-2 m-3'  />
-          <input placeholder='Email' type='email' onChange={(e)=>setEmail(e.target.value)}  className='bg-gray-400  placeholder:text-black outline-none px-2 py-2 m-3' />
+          <input placeholder='name' type='text 'onChange={(e)=>setName(e.target.value)}   className='bg-gray-400 placeholder:text-black outline-none px-2 py-2 m-2'  />
+          <input placeholder='Email' type='email' onChange={(e)=>setEmail(e.target.value)}  className='bg-gray-400  placeholder:text-black outline-none px-2 py-2 m-2' />
         </div>
         <div className='flex justify-normal'>
-          <input placeholder='Phone ' type='number' onChange={(e)=>setPhone(e.target.value)}  className='bg-gray-400  placeholder:text-black outline-none px-2 py-2 m-3' />
-          <input placeholder='Who am I?' type='text' onChange={(e)=>setTitle(e.target.value)} className='bg-gray-400  placeholder:text-black outline-none px-2 py-2 m-3' />
+          <input placeholder='Phone ' type='number' onChange={(e)=>setPhone(e.target.value)}  className='bg-gray-400  placeholder:text-black outline-none px-2 py-2 m-2' />
+          <input placeholder='Who am I?' type='text' onChange={(e)=>setTitle(e.target.value)} className='bg-gray-400  placeholder:text-black outline-none px-2 py-2 m-2' />
         </div>
         <div>
           <textarea placeholder='Message' onChange={(e)=>setText(e.target.value)}  className='bg-gray-400  placeholder:text-black outline-none px-2 py-2 m-3 w-[100%]'/>

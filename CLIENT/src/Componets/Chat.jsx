@@ -7,7 +7,8 @@ function Chat({ socket, username, room }) {
   const [currentMessage, setCurrentMessage] = useState("");
   const [messageList, setMessageList] = useState([]);
 
-  const sendMessage = async () => {
+  const sendMessage = async (e) => {
+    e.preventDefault()
     if (currentMessage !== "") {
       const messageData = {
         room: room,
@@ -27,35 +28,40 @@ function Chat({ socket, username, room }) {
 
   useEffect(() => {
     socket.on("receive_message", (data) => {
-
-      setMessageList((list) => [...list, data]);
-      
+      if (data.author !== username) {
+        setMessageList((list) => [...list, data]);
+      }
     });
     
-  }, [socket]);
+    return () => {
+      socket.off("receive_message");
+    };
+  }, [socket, username]);
  
   return (
     <>
-    <div className="w-full h-[70vh] bg-gray-100 mt-[10%]">
+    <div className="bg-white min-h-[100vh] max-h-fit relative w-[50vw] z-0">
+    <div className="w-full h-fit bg-white mt-[10%] shadow-2xl">
       <div className="chat-header">
         <p>Live Chat</p> 
       </div>
       <div className="chat-container">
-        <ScrollToBottom className="bg-gray-200">
+        <ScrollToBottom className="bg-WHITE">
           {messageList.map((messageContent) => {
             return (
               <div
-                className="message"
+                className="w-[100%] rounded"
                 id={username === messageContent.author ? "you" : "other"}
               >
-                <div>
+                <div className="block ">
                   <div className="message-content">
                     <p>{messageContent.message}</p>
+                    <div className="font-bold block w-fit">
+                    <p id="time" className="text-black">{messageContent.author}</p>
+                    <p id="author" className="font-bold text-xm">{messageContent.time}</p>
                   </div>
-                  <div className="message-meta">
-                    <p id="time">{messageContent.author}</p>
-                    <p id="author">{messageContent.time}</p>
                   </div>
+                  
                 </div>
               </div>
             );
@@ -68,7 +74,7 @@ function Chat({ socket, username, room }) {
       <textarea
           type="text"
           
-          className=" mt-[70%]  h-[100px] w-[50%] bg-gray-600 sticky"
+          className=" mt-[70%]  h-[100px] w-[50%] bg-slate-200 sticky text-black p-3"
           value={currentMessage}
           placeholder="Messsage..."
           onChange={(event) => {
@@ -78,8 +84,9 @@ function Chat({ socket, username, room }) {
             event.key === "Enter" && sendMessage();
           }}
         />
-        <button onClick={sendMessage}className="h-[50px] text-pink-900 absolute" >send</button>
+        <button onClick={sendMessage}className="h-[50px] text-white font-bild sticky bg-pink-500 p-2 rounded ml-5 w-[20%]" >send</button>
       </div>
+    </div>
     </div>
     </>
   );
